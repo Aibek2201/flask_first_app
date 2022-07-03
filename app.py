@@ -1,4 +1,3 @@
-from operator import methodcaller
 from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 import yaml
