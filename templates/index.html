@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
-{% block base %}
-<h1>Welcome to flask</h1>
+{% block body %}
 <form method="POST">
-<input type="password" name="password"></input>
-<input type="submit"></input>
+    Name: <input type="text" name="name">
+    Age: <input type="text" name="age">
+    <input type="submit">
 </form>
 {% endblock %}
-
-
