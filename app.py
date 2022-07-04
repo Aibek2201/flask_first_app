@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, session
 from flask_mysqldb import MySQL
+from flask_bootstrap import Bootstrap
 import yaml
-from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
+Bootstrap(app)
 
 #DB config
 db = yaml.load(open('db.yaml'))
@@ -32,8 +33,8 @@ def employees():
     result_value = cursor.execute("SELECT * FROM employee")
     if result_value > 0:
         employees = cursor.fetchall()
-        return str(check_password_hash(employees[2]['name'],'Aibek'))
-        # return render_template('employees.html', employees = employees)
+
+        return render_template('employees.html', employees = employees)
 
 if __name__ == '__main__':
     app.run(debug=True,port=5000)

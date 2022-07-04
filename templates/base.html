@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit form project</title>
-</head>
+{% extends 'bootstrap/base.html' %}
 
-<body>
-    {% block body %}
+{% block title %}
+Submit form
+{% endblock %}
+
+{% block navbar %}
+    {% include '_navbar.html' %}
+{% endblock %}
+
+{% block content %}
+    {% block sub_content %}
     {% endblock %}
-</body>
-</html>
+{% endblock %}
